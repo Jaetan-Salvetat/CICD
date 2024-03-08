@@ -43,7 +43,7 @@ output-reports:
   exclude:
     - 'MdOutputReport'
     - 'TxtOutputReport'
-    - 'XmlOutputReport'
+    # - 'XmlOutputReport'
     - 'HtmlOutputReport'
     - 'sarif'
 
