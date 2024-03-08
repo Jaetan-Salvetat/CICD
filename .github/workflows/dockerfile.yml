@@ -13,8 +13,6 @@ jobs:
         id: lastTag
         uses: WyriHaximus/github-action-get-previous-tag@v1
 
-      - run: echo ${{ steps.previousTag.outputs.tag }}
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -28,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: jaetan/ktor-sample:${{ steps.previousTag.outputs.tag }}
+          tags: jaetan/ktor-sample:${{ steps.lastTag.outputs.tag }}
