@@ -3,9 +3,6 @@ on: pull_request
 
 permissions: write-all
 
-env:
-  REVIEWDOG_GITHUB_API_TOKEN: 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
-
 jobs:
   builds:
     runs-on: ubuntu-latest
