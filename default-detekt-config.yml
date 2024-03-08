@@ -382,7 +382,7 @@ style:
     severity: warning
   ForbiddenComment:
     active: true
-    severity: warning
+    severity: error
     comments:
       - reason: 'Forbidden FIXME todo marker in comment, please fix the problem.'
         value: 'FIXME:'
