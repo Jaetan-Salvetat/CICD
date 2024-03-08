@@ -540,6 +540,6 @@ style:
     ignoreLateinitVar: false
   WildcardImport:
     active: true
-    severity: warning
+    severity: error
     excludeImports:
       - 'java.util.*'
