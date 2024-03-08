@@ -3,14 +3,13 @@ build:
 
 config:
   validation: true
-  warningsAsErrors: false
+  warningsAsErrors: true
   checkExhaustiveness: false
   # when writing own rules with new properties, exclude the property path e.g.: ['my_rule_set', '.*>.*>[my_property]']
   # excludes: []
 
 processors:
   active: true
-  severity: warning
   exclude:
     - 'DetektProgressListener'
   # - 'KtFileCountProcessor'
@@ -28,7 +27,6 @@ processors:
 
 console-reports:
   active: true
-  severity: warning
   exclude:
     - 'ProjectStatisticsReport'
     - 'ComplexityReport'
@@ -39,7 +37,6 @@ console-reports:
 
 output-reports:
   active: true
-  severity: warning
   exclude:
     - 'MdOutputReport'
     - 'TxtOutputReport'
@@ -49,7 +46,6 @@ output-reports:
 
 coroutines:
   active: true
-  severity: warning
   InjectDispatcher:
     active: true
     severity: warning
@@ -69,7 +65,6 @@ coroutines:
 
 empty-blocks:
   active: true
-  severity: warning
   EmptyCatchBlock:
     active: true
     severity: warning
@@ -117,7 +112,6 @@ empty-blocks:
 
 exceptions:
   active: true
-  severity: warning
   ExceptionRaisedInUnexpectedLocation:
     active: true
     severity: warning
@@ -194,7 +188,6 @@ exceptions:
 
 naming:
   active: true
-  severity: warning
   BooleanPropertyNaming:
     active: true
     severity: warning
@@ -268,7 +261,6 @@ naming:
 
 performance:
   active: true
-  severity: warning
   ArrayPrimitive:
     active: true
     severity: warning
@@ -286,7 +278,6 @@ performance:
 
 potential-bugs:
   active: true
-  severity: warning
   AvoidReferentialEquality:
     active: true
     severity: warning
@@ -379,7 +370,6 @@ potential-bugs:
 
 style:
   active: true
-  severity: warning
   DestructuringDeclarationWithTooManyEntries:
     active: true
     severity: warning
