@@ -10,11 +10,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get Previous tag
-        id: versionManager
+        env:
+          VERSION: ""
         run: |
           PROP_VALUE=$(cat $GRADLE_FILE | grep "version" | cut -d'=' -f2)
-          version=$PROP_VALUE >> "$GITHUB_ENV"
-          echo $PROP_VALUE
+          $VERSION="$PROP_VALUE"
+          echo "$PROP_VALUE"
 
       - run: echo ${{ steps.versionManager.output.version }}
 
