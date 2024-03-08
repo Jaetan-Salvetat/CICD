@@ -10,3 +10,4 @@ function getProperty {
 }
 
 echo "VERSION=$(getProperty "appVersion")" >> "$GITHUB_ENV"
+echo "TAG=jaetan/ktor-sample:$VERSION" >> "$GITHUB_ENV"

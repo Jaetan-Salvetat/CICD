@@ -9,11 +9,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Get Previous tag
+      - name: Get version
         id: versionManager
         run: bash ./get-version.sh
 
-      - run: echo $VERSION
+      - name: Log tag && version
+        run: |
+          echo $VERSION
+          echo $TAG
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -28,4 +31,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: "jaetan/ktor-sample:$VERSION"
+          tags: $TAG
