@@ -18,5 +18,4 @@ jobs:
           github_token: ${{ secrets.github_token }}
           detekt_build_upon_default_config: true
           reviewdog_level: error
-          reviewdog_filter: nofilter
           fail_on_error: true
