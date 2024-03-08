@@ -11,10 +11,7 @@ jobs:
 
       - name: Get Previous tag
         id: versionManager
-        run: |
-          PROP_VALUE=$(cat $GRADLE_FILE | grep "version" | cut -d'=' -f2)
-          "VERSION=$PROP_VALUE" >> $GITHUB_ENV
-          echo VERSION
+        run: `VERSION=$(cat $GRADLE_FILE | grep "version" | cut -d'=' -f2)`  >> $GITHUB_ENV
 
       - run: echo $VERSION
 
