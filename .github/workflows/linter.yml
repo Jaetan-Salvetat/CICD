@@ -16,5 +16,5 @@ jobs:
         uses: alaegin/Detekt-Action@v1.23.5
         with:
           github_token: ${{ secrets.github_token }}
-          reviewdog_level: error
+          reviewdog_level: warning
           fail_on_error: true

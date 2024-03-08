@@ -39,13 +39,14 @@ output-reports:
   active: true
   exclude:
     - 'MdOutputReport'
-  # - 'TxtOutputReport'
-  # - 'XmlOutputReport'
-  # - 'HtmlOutputReport'
-  # - 'sarif'
+    - 'TxtOutputReport'
+    - 'XmlOutputReport'
+    - 'HtmlOutputReport'
+    - 'sarif'
 
 comments:
   active: true
+  severity: warning
   AbsentOrWrongFileLicense:
     active: false
     licenseTemplateFile: 'license.template'
@@ -86,57 +87,77 @@ comments:
 
 coroutines:
   active: true
+  severity: warning
   GlobalCoroutineUsage:
     active: false
   InjectDispatcher:
     active: true
+    severity: warning
     dispatcherNames:
       - 'IO'
       - 'Default'
       - 'Unconfined'
   RedundantSuspendModifier:
     active: true
+    severity: warning
   SleepInsteadOfDelay:
     active: true
+    severity: warning
   SuspendFunSwallowedCancellation:
     active: false
   SuspendFunWithCoroutineScopeReceiver:
     active: false
   SuspendFunWithFlowReturnType:
     active: true
+    severity: warning
 
 empty-blocks:
   active: true
+  severity: warning
   EmptyCatchBlock:
     active: true
+    severity: warning
     allowedExceptionNameRegex: '_|(ignore|expected).*'
   EmptyClassBlock:
     active: true
+    severity: warning
   EmptyDefaultConstructor:
     active: true
+    severity: warning
   EmptyDoWhileBlock:
     active: true
+    severity: warning
   EmptyElseBlock:
     active: true
+    severity: warning
   EmptyFinallyBlock:
     active: true
+    severity: warning
   EmptyForBlock:
     active: true
+    severity: warning
   EmptyFunctionBlock:
     active: true
+    severity: warning
     ignoreOverridden: false
   EmptyIfBlock:
     active: true
+    severity: warning
   EmptyInitBlock:
     active: true
+    severity: warning
   EmptySecondaryConstructor:
     active: true
+    severity: warning
   EmptyTryBlock:
     active: true
+    severity: warning
   EmptyWhenBlock:
     active: true
+    severity: warning
   EmptyWhileBlock:
     active: true
+    severity: warning
 
 exceptions:
   active: true
