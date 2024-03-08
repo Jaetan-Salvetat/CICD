@@ -10,8 +10,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get Previous tag
-        id: lastTag
-        uses: WyriHaximus/github-action-get-previous-tag@v1
+        id: versionManager
+        run: ./get-version.sh
+
+      - run: echo ${{ steps.versionManager.output.version }}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
