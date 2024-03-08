@@ -10,9 +10,5 @@ fun Application.configureRouting() {
         get("/ping") {
             call.respondText("Hello World!")
         }
-        // Static plugin. Try to access `/static/index.html`
-        static("/") {
-            resources("static")
-        }
     }
 }

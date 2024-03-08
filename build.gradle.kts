@@ -10,6 +10,22 @@ plugins {
 group = "com.example"
 version = "0.0.1"
 
+ktor {
+    docker {
+        jreVersion.set(JavaVersion.VERSION_19)
+        localImageName.set("docker-image")
+        imageTag.set("0.0.1")
+
+        portMappings.set(listOf(
+            io.ktor.plugin.features.DockerPortMapping(
+                8080,
+                8080,
+                io.ktor.plugin.features.DockerPortMappingProtocol.TCP
+            )
+        ))
+    }
+}
+
 application {
     mainClass.set("com.example.ApplicationKt")
 
