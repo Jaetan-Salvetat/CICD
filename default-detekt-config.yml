@@ -401,7 +401,6 @@ style:
       - reason: 'Forbidden TODO todo marker in comment, please do the changes.'
         value: 'TODO:'
     allowedPatterns: ''
-    forbiddenPatterns: ''
   ForbiddenVoid:
     active: true
     severity: warning
