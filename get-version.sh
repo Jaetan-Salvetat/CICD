@@ -1,4 +1,6 @@
-GRADLE_FILE=build.gralde.kts
+#!/usr/bin/env bash
+
+GRADLE_FILE="./gradle.properties"
 
 function getProperty {
     PROP_KEY=$1
@@ -7,4 +9,4 @@ function getProperty {
     echo "$PROP_VALUE"
 }
 
-echo "version=$(getProperty "version")" >> "$GITHUB_ENV"
+echo "VERSION=$(getProperty "appVersion")" >> "$GITHUB_ENV"

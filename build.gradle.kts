@@ -1,6 +1,7 @@
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val appVersion: String by project
 
 plugins {
     kotlin("jvm") version "1.9.23"
@@ -8,7 +9,7 @@ plugins {
 }
 
 group = "com.example"
-version = "0.0.1"
+version = appVersion
 
 application {
     mainClass.set("com.example.ApplicationKt")
