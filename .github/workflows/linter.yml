@@ -1,6 +1,11 @@
 name: Linter
 on: pull_request
 
+permissions:
+  checks: write
+  discussions: write
+  contents: write
+
 jobs:
   builds:
     runs-on: ubuntu-latest
