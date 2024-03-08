@@ -19,3 +19,4 @@ jobs:
           reviewdog_reporter: github-pr-review
           reviewdog_filter: nofilter
           reviewdog_level: warning
+          fail_on_error: true
