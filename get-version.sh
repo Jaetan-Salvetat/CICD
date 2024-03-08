@@ -8,6 +8,6 @@ function getProperty {
     PROP_VALUE=$(cat $GRADLE_FILE | grep "$PROP_KEY" | cut -d'=' -f2)
     echo "$PROP_VALUE"
 }
-
-echo "VERSION=$(getProperty "appVersion")" >> "$GITHUB_ENV"
+VERSION=$(getProperty "appVersion")
+echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 echo "TAG=jaetan/ktor-sample:$VERSION" >> "$GITHUB_ENV"
