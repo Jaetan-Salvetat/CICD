@@ -19,5 +19,4 @@ jobs:
         uses: alaegin/Detekt-Action@v1.23.5
         with:
           github_token: ${{ secrets.github_token }}
-          reviewdog_reporter: github-pr-check
           reviewdog_filter: nofilter
