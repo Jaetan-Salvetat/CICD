@@ -11,7 +11,7 @@ jobs:
 
       - name: Get Previous tag
         id: versionManager
-        run: ./get-version.sh
+        run: bash ./get-version.sh
 
       - run: echo ${{ steps.versionManager.output.version }}
 
