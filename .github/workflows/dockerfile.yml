@@ -30,4 +30,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: 'jaetan/ktor-sample:${{ steps.previousTag.outputs.tag }}'
+          tags: ${{ steps.previousTag.outputs.tag }}
