@@ -20,6 +20,6 @@ jobs:
       - name: Code review
         uses: alaegin/Detekt-Action@v1.23.5
         with:
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ secrets.GIT_TOKEN }}
           reviewdog_reporter: github-pr-review
           reviewdog_filter: nofilter

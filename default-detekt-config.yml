@@ -539,7 +539,7 @@ style:
     severity: warning
     ignoreLateinitVar: false
   WildcardImport:
-    active: true
+    active: false
     severity: error
     excludeImports:
       - 'java.util.*'
