@@ -7,8 +7,17 @@ import io.ktor.server.routing.*
 
 fun Application.configureRouting() {
     routing {
-        get("/ping") {
+        get("/") {
             call.respondText("Hello World!")
+        }
+
+        get("ping") {
+            call.respond(Pong())
         }
     }
 }
+
+private data class Pong(
+    val success: Boolean = true,
+    val data: String = "Pong!"
+)
