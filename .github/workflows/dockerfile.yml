@@ -10,14 +10,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get Previous tag
-        env:
-          VERSION: ""
+        id: versionManager
         run: |
           PROP_VALUE=$(cat $GRADLE_FILE | grep "version" | cut -d'=' -f2)
-          $VERSION="$PROP_VALUE"
-          echo "$PROP_VALUE"
+          "VERSION=$PROP_VALUE" >> $GITHUB_ENV
+          echo VERSION
 
-      - run: echo ${{ steps.versionManager.output.version }}
+      - run: echo $VERSION
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
