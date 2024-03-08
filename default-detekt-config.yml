@@ -439,9 +439,6 @@ style:
   NestedClassesVisibility:
     active: true
     severity: warning
-  NewLineAtEndOfFile:
-    active: true
-    severity: warning
   ObjectLiteralToLambda:
     active: true
     severity: warning
@@ -538,8 +535,3 @@ style:
     active: true
     severity: warning
     ignoreLateinitVar: false
-  WildcardImport:
-    active: false
-    severity: error
-    excludeImports:
-      - 'java.util.*'
