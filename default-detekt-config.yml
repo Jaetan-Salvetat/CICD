@@ -213,7 +213,6 @@ naming:
     active: true
     severity: warning
     enumEntryPattern: '[A-Z][_a-zA-Z0-9]*'
-    forbiddenName: []
   FunctionNaming:
     active: true
     severity: warning
@@ -230,7 +229,6 @@ naming:
     severity: warning
     rootPackage: ''
     requireRootInDeclaration: false
-    parameterPattern: '[a-z][A-Za-z0-9]*|_'
   MatchingDeclarationName:
     active: true
     severity: warning
@@ -306,7 +304,6 @@ potential-bugs:
       - 'java.util.HashSet'
       - 'java.util.LinkedHashMap'
       - 'java.util.HashMap'
-    ignoredSubjectTypes: []
   EqualsAlwaysReturnsTrueOrFalse:
     active: true
     severity: warning
@@ -339,7 +336,6 @@ potential-bugs:
   ImplicitDefaultLocale:
     active: true
     severity: warning
-    allowExplicitReturnType: true
   InvalidRange:
     active: true
     severity: warning
@@ -394,7 +390,6 @@ style:
   ExplicitItLambdaParameter:
     active: true
     severity: warning
-    includeLineWrapping: false
   ForbiddenComment:
     active: true
     severity: warning
@@ -406,7 +401,6 @@ style:
       - reason: 'Forbidden TODO todo marker in comment, please do the changes.'
         value: 'TODO:'
     allowedPatterns: ''
-    imports: []
     forbiddenPatterns: ''
   ForbiddenVoid:
     active: true
@@ -489,8 +483,6 @@ style:
   SerialVersionUIDInSerializableClass:
     active: true
     severity: warning
-    maxEscapedCharacterCount: 2
-    ignoredCharacters: []
   ThrowsCount:
     active: true
     severity: warning
