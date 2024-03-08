@@ -29,23 +29,23 @@ processors:
 console-reports:
   active: true
   severity: warning
-  # exclude:
-    # - 'ProjectStatisticsReport'
-    # - 'ComplexityReport'
-    # - 'NotificationReport'
-    # - 'FindingsReport'
-    # - 'FileBasedFindingsReport'
-    # - 'LiteFindingsReport'
+  exclude:
+    - 'ProjectStatisticsReport'
+    - 'ComplexityReport'
+    - 'NotificationReport'
+    - 'FindingsReport'
+    - 'FileBasedFindingsReport'
+  #  - 'LiteFindingsReport'
 
 output-reports:
   active: true
   severity: warning
-  # exclude:
-    # - 'MdOutputReport'
-    # - 'TxtOutputReport'
-    # - 'XmlOutputReport'
-    # - 'HtmlOutputReport'
-    # - 'sarif'
+  exclude:
+    - 'MdOutputReport'
+    - 'TxtOutputReport'
+    - 'XmlOutputReport'
+    - 'HtmlOutputReport'
+    - 'sarif'
 
 coroutines:
   active: true
