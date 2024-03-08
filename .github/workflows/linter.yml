@@ -6,6 +6,9 @@ permissions:
 
 jobs:
   builds:
+    env:
+      REVIEWDOG_GITHUB_API_TOKEN: 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
+
     runs-on: ubuntu-latest
 
     steps:
@@ -19,4 +22,5 @@ jobs:
         uses: alaegin/Detekt-Action@v1.23.5
         with:
           github_token: ${{ secrets.github_token }}
+          reviewdog_reporter: github-pr-review
           reviewdog_filter: nofilter
