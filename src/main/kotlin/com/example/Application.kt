@@ -11,8 +11,9 @@ fun main() {
 }
 
 fun Application.module() {
-    configureHTTP()
     configureMonitoring()
     configureSerialization()
+    configureHTTP()
+    configureMySql()
     configureRouting()
 }
