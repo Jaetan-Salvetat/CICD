@@ -1,5 +1,7 @@
 name: Linter
-on: push
+on: pull_request
+
+permissions: write-all
 
 jobs:
   builds:
@@ -12,11 +14,9 @@ jobs:
           fetch-depth: 1
           ref: ${{ github.head_ref }}
 
-      - name: detekt
-        uses: alaegin/Detekt-Action@v1.23.5
+      - name: ktlint
+        uses: ScaCap/action-ktlint@master
         with:
           github_token: ${{ secrets.github_token }}
-          detekt_build_upon_default_config: true
-          reviewdog_level: error
-          reviewdog_filter: nofilter
+          reporter: github-pr-review
           fail_on_error: true
